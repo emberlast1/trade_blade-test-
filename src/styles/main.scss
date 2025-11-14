@@ -1,16 +1,66 @@
 @import 'utils/vars';
+@import 'utils/mixins';
 @import 'header/header';
+@import 'main/hero_screen/hero_screen';
+@import 'main/statistic/statistic';
 
 * {
-  margin: 0 auto;
-  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   transition: all 0.5s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  margin: 0 auto;
+
   background-color: $background-color;
-  max-width: 1200px;
+
+  .btn {
+      font-size: 12px;
+      line-height: 20px;
+      color: $blue-color;
+      text-transform: uppercase;
+      border: 1.5px solid $blue-color;
+      border-radius: 3px;
+      box-shadow: $blue-color-with-opacity 0.5px 0.5px 20px;
+      background-color: $blue-color-with-opacity;
+      padding-inline: 24px;
+      padding-block: 11px;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover {
+        background-color: $blue-color;
+        color: $background-color;
+      }
+
+      &--form {
+        width: auto;
+      }
+    }
+}
+
+.container {
+  padding-inline: 80px;
+  display: flex;
+  justify-content: center;
+
+  &--hero {
+    background-color: $background-color;
+  }
+
+  &--statistic {
+
+    background-color: $white-color;
+  }
+}
+
+.decor {
+  width: 40%;
+  display: block;
 }

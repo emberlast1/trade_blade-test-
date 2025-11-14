@@ -1,0 +1,66 @@
+.hero {
+  &_screen{
+    display: flex;
+   flex-direction: row;
+   gap: 128px;
+   align-items: center;
+   height: 80vh;
+   background-color: $background-color;
+   max-width: 1440px;
+}
+
+&__form {
+      display: flex;
+      flex-direction: row;
+      width: 400px;
+
+      input {
+        flex: 2;
+        padding: 12px 15px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border: 1px solid $input-background-color;
+        background: $input-background-color;
+        color: white;
+        font-size: 14px;
+
+        &::placeholder {
+          color: $grey-color;
+        }
+
+        &:focus {
+          outline: 1px solid $blue-color;
+        }
+      }
+}
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 550px;
+    color: $white-color;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 72px;
+      letter-spacing: -4%;
+    }
+
+    p {
+      color: $grey-color;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  &__image {
+    width: 400px;
+    height: 209px;
+  }
+}
+
+.hint {
+  color: $grey-color;
+  font-size: 12px;
+}

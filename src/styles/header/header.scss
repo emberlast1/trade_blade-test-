@@ -1,25 +1,30 @@
 .header {
-  padding: 15px 0;
+  background-color: $background-color;
+  margin: 0 auto;
 
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-self: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1440px;
+
+    @include on-phone {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
     display: flex;
     align-items: center;
-    margin-right: 0;
+    margin: 0;
 
     &-img {
       height: 64px;
       width: 131px;
     }
 
-    .accent {
-      color: #3CCBFF;
-    }
   }
 
   .nav {
@@ -39,6 +44,25 @@
         text-shadow: $blue-color 1px 1px 10px;;
       }
     }
+
+    &--desktop {
+      @include on-phone {
+      display: none;
+    }
+    }
+
+    &--burger {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+  a {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+  }
+    }
   }
 
   &__buttons {
@@ -46,23 +70,72 @@
     gap: 10px;
     margin-left: 0;
 
-    .btn {
-      font-size: 12px;
-      line-height: 20px;
-      color: $blue-color;
-      text-transform: uppercase;
-      border: 1.5px solid $blue-color;
-      border-radius: 3px;
-      box-shadow: $blue-color-with-opacity 0.5px 0.5px 20px;
-      background-color: $blue-color-with-opacity;
-      padding-inline: 24px;
-      padding-block: 11px;
+    &--desktop {
+      @include on-phone {
+      display: none;
+    }
+    }
+
+    &--burger {
+      width: 95%;
+      position: fixed;
+      bottom: 15px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  &__burger {
+    &_logo {
+      display: none;
       cursor: pointer;
 
-      &:hover {
-        background-color: $blue-color;
-        color: $background-color;
+
+      @include on-phone {
+        display: block;
+        margin: 0;
       }
     }
   }
+}
+
+.burger {
+  &__link {
+    display: none;
+
+    @include on-phone {
+      display: block;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    background-color: $violet-color;
+    height: 100vh;
+    z-index: 2;
+    transform: translateY(-100%);
+    pointer-events: none;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:target {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+      overflow: hidden;
+    }
+
+    &_exit {
+      position: fixed;
+      right: 10px;
+      top: 16px;
+    }
+      }
 }

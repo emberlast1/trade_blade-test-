@@ -13,14 +13,16 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__container">
+      <div class="header__container">
+
         <div class="header__logo">
           <img
           class="header__logo-img"
           src="./images/logo.svg"
           alt="logo">
         </div>
-        <nav class="nav">
+
+        <nav class="nav nav--desktop">
           <a href="#">Цифры</a>
           <a href="#">Сделки онлайн</a>
           <a href="#">О компании</a>
@@ -29,11 +31,107 @@
           <a href="#">Отзывы</a>
           <a href="#">FAQ</a>
         </nav>
-        <div class="header__buttons">
+
+        <div class="header__buttons header__buttons--desktop">
           <button class="btn">Вход</button>
           <button class="btn">Регистрация</button>
         </div>
+
+        <a class="burger__link" href="#burger">
+          <img
+        class="header__burger_logo"
+        src="./images/burger_logo.svg"
+        alt="burger">
+        </a>
+
+        <aside id="burger" class="burger__menu">
+          <div class="container burger__menu__container">
+            <a href="#">
+              <img
+              class="burger__menu_exit"
+              src="./images/exit.svg"
+              alt="exit">
+            </a>
+
+            <nav class="nav nav--burger">
+              <a href="#">Цифры</a>
+              <a href="#">Сделки онлайн</a>
+              <a href="#">О компании</a>
+              <a href="#">Как начать</a>
+              <a href="#">Тарифы</a>
+              <a href="#">Отзывы</a>
+              <a href="#">FAQ</a>
+            </nav>
+
+            <div class="header__buttons header__buttons--burger">
+              <button class="btn">Вход</button>
+              <button class="btn">Регистрация</button>
+            </div>
+          </div>
+        </aside>
       </div>
     </header>
+
+    <main class="main">
+      <div class="container container--hero">
+        <section class="hero_screen" id="hero">
+          <div class="hero__text">
+            <h1>
+              МОМЕНТАЛЬНО<br>
+              КОПИРУЙ СДЕЛКИ<br>
+              ПРОФИ ТРЕЙДЕРОВ
+            </h1>
+
+            <p>Начни копировать сделки с успешной командой профессиональных трейдеров в автоматическом режиме.</p>
+
+            <form class="hero__form">
+              <input type="email" placeholder="ВАШ E-MAIL">
+
+              <button type="submit" class="btn btn--form">НАЧАТЬ</button>
+            </form>
+
+            <span class="hint">5 дней бесплатного пользования</span>
+          </div>
+
+          <img
+          class="hero__image"
+          src="./images/hero_image.png"
+          alt="graphic">
+        </section>
+      </div>
+
+      <img src="./images/Rectangle 71.svg"
+      alt="decor"
+      class="decor decor--top">
+
+      <div class="container container--statistic">
+        <section class="statistic">
+          <div class="statistic-left">
+            <h2>ЦИФРЫ</h2>
+            <span class="date">Сентябрь 2022</span>
+          </div>
+
+          <div class="statistic-grid">
+            <div class="stat">
+              <span class="label">ТОРГОВОЙ ПРИБЫЛИ</span>
+              <span class="value">2756%</span>
+            </div>
+
+            <div class="stat">
+              <span class="label">ФЬЮЧЕРСНЫХ И СПОТОВЫХ СДЕЛОК</span>
+              <span class="value">67</span>
+            </div>
+
+            <div class="stat">
+              <span class="label">ПРИБЫЛЬ ПОДПИСЧИКОВ</span>
+              <span class="value">375000</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+
+    </main>
   </body>
 </html>
