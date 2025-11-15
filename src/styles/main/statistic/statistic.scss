@@ -1,17 +1,28 @@
 .statistic {
-  max-width: 1440px;
   display: flex;
-  gap: 80px;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-block: 50px;
+
+
+  @include on-phone {
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    padding-block: 30px;
+  }
 
   h2 {
     font-size: 44px;
     font-weight: 700;
     line-height: 56px;
     letter-spacing: 4%;
+
+    @include on-phone {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   span {
@@ -26,10 +37,20 @@
     justify-content: space-between;
     gap: 50px;
 
+    @include on-phone {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
     .stat {
       display: flex;
       flex-direction: column;
       gap: 15px;
+
+      @include on-phone {
+        gap: 4px;
+        flex: 1;
+      }
 
       .label {
         font-size: 12px;
@@ -41,6 +62,11 @@
         font-size: 50px;
         font-weight: 500;
         color: $violet-color;
+
+        @include on-phone {
+          font-size: 35px;
+          line-height: 40px;
+        }
       }
     }
   }

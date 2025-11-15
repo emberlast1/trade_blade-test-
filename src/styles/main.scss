@@ -3,6 +3,14 @@
 @import 'header/header';
 @import 'main/hero_screen/hero_screen';
 @import 'main/statistic/statistic';
+@import 'main/trade/trade';
+@import 'main/about/about';
+@import 'main/what_its/what_its';
+@import 'main/how_to_start/how_to_start';
+@import 'main/prices/prices';
+@import 'footer/footer';
+@import 'main/faq/faq';
+
 
 * {
   margin: 0;
@@ -17,8 +25,8 @@ html {
 
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-
   background-color: $background-color;
+  scroll-behavior: smooth;
 
   .btn {
       font-size: 12px;
@@ -50,17 +58,56 @@ body {
   display: flex;
   justify-content: center;
 
+  @include on-phone {
+      justify-content: left;
+      padding-inline: 20px;
+    }
+
   &--hero {
     background-color: $background-color;
   }
 
   &--statistic {
-
     background-color: $white-color;
   }
+
+  &--trade {
+    background-color: $background-color;
+  }
+
+  &--about {
+    background-color: $white-color;
+  }
+
+  &--what_its {
+    background-color: $background-color;
+  }
+
+  &--how_to_start {
+    background-color: $violet-color;
+  }
+
+  &--prices {
+      border-bottom: 2px solid $grey-color;
+  }
+
+  &--faq {
+    background-color: $white-color;
+  }
+
 }
 
 .decor {
   width: 40%;
   display: block;
+
+  @include on-phone {
+    width: 60%;
+    margin-top: 37px;
+  }
+}
+
+section, footer {
+  width: 100%;
+  max-width: 1440px;
 }

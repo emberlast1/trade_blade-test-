@@ -1,0 +1,73 @@
+.what_its {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 96px;
+
+  @include on-phone {
+    flex-direction: column;
+    margin-block: 60px;
+  }
+
+  &__title {
+    flex: 1;
+    font-size: 44px;
+    color: $white-color;
+    line-height: 56px;
+    text-transform: uppercase;
+
+    @include on-phone {
+      font-size: 28px;
+      line-height: 36px;
+      margin-top: 140px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__cards {
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 56px;
+
+    @include on-phone {
+      dlex-direction: column;
+    }
+
+    .card {
+      max-width: 414px;
+      display: flex;
+      gap: 32px;
+
+      img {
+        width: 56px;
+        height: 56px;
+      }
+
+      &__content {
+        h2 {
+          font-size: 23px;
+          line-height: 36px;
+          color: $white-color;
+          margin-bottom: 8px;
+
+          @include on-phone {
+            font-size: 20px;
+            line-height: 28px;
+    }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 20px;
+          color: $grey-color;
+
+          @include on-phone {
+            font-size: 14px;
+            line-height: 17px;
+    }
+        }
+      }
+    }
+  }
+}

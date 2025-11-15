@@ -1,0 +1,73 @@
+.faq {
+  margin-block: 96px;
+
+  &__title {
+    font-size: 44px;
+    line-height: 56px;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+
+    @include on-phone {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  .accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+.accordion-item:not(.active) .accordion-header {
+    background-color: $accordion-background;
+    color: #333;
+}
+
+.accordion-item.active .accordion-header {
+    background-color: $violet-color;
+    color: $white-color;
+}
+
+.accordion-content {
+    background-color: $violet-color;
+    color: $white-color;
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-out;
+}
+
+.accordion-content.open {
+    height: auto;
+    padding: 15px 20px 20px 20px;
+}
+
+.accordion-content p {
+    margin: 0;
+    line-height: 1.5;
+    color: $white-color;
+}
+
+.arrow-icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .arrow-icon {
+    transform: rotate(180deg);
+}
+}
