@@ -28,6 +28,10 @@ body {
   background-color: $background-color;
   scroll-behavior: smooth;
 
+  &:has(.burger__menu:target) {
+    overflow: hidden;
+  }
+
   .btn {
       font-size: 12px;
       line-height: 20px;
